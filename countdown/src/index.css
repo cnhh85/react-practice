@@ -24,18 +24,23 @@ code {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition-timing-function: ease-out;
+  transition: 0.5s;
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #61dafb;
+  transition-timing-function: ease-out;
+  transition: 2s;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  color: #61dafb;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition-timing-function: ease-out;
-  transition: 2s;
 }
 
 .title h1 {
@@ -59,14 +64,34 @@ code {
   padding: 20px;
   margin: 20px;
   margin-top: 0;
-  border: 1px solid #61dafb;
+  border: 1px solid #60d9fb;
   border-radius: 8px;
 }
 
 .clock h2 {
   font-size: 30px;
 }
+
 .clock p {
   text-align: center;
   align-items: center;
+}
+
+.inputArea {
+  background-image: url("./assets/images/background/input.png");
+  background-size: auto;
+  position: fixed;
+  width: 1116px;
+  height: 702px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 35px 0 rgb(96 217 251/ 10%);
+  border-radius: 8px;
+}
+
+.inputArea .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
