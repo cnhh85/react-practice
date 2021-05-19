@@ -1,8 +1,6 @@
 import React from "react";
 
-
 export default class Countdown extends React.Component {
-
   difference = new Date("August 28, 2021") - new Date();
 
   constructor(props) {
@@ -22,8 +20,6 @@ export default class Countdown extends React.Component {
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
-
-  
 
   tick() {
     this.difference = new Date("August 28, 2021") - new Date();

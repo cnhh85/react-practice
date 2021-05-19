@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+}
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-timing-function: ease-out;
+  transition: 0.5s;
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #61dafb;
+  transition-timing-function: ease-out;
+  transition: 2s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title h1 {
+  font-size: 70px;
+  border-bottom: 1px solid #61dafb;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.row {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 60px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 0;
+  border: 1px solid #60d9fb;
+  border-radius: 8px;
+}
+
+.clock h2 {
+  font-size: 30px;
+}
+
+.clock p {
+  text-align: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.btn.toggle-form {
+  margin: auto;
+  width: 35%;
+  border: 1px solid #60d9fb;
+  margin-top: 35px;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.toggle-form:hover {
+  background-color: #347a8d;
+  color: white;
+}
+
+.inputArea {
+  background-image: url("../images/background/input.png");
+  background-size: auto;
+  position: fixed;
+  margin-top: 100vh;
+  width: 1116px;
+  height: 702px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 35px 0 rgb(0 0 0/ 10%);
+  border-radius: 8px;
+  transition: all .5s;
+}
+
+.inputArea {
+  animation: popup 0.5s;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  padding: 0;
+}
+
+.close i {
+  font-size: 30px;
+  color: white;
+  transition: 0.4s;
+}
+
+.close:hover i {
+  color: gray;
+}
+
+.inputBox {
+  text-align: left;
+  align-items: center;
+  margin-left: 50px;
+  flex: 0 0 33.333333%;
+}
+.inputBox .title {
+  margin-bottom: 50px;
+  border-left: 1px solid #ffffff;
+  padding-left: 15px;
+}
+.inputBox .title h1 {
+  font-size: 30px;
+  border-bottom: none;
+  font-weight: 600;
+  color: azure;
+}
+
+.inputBox .title p {
+  color: rgb(130, 146, 170);
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-control {
+  width: 350px;
+  height: 30px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.form-control::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.form-group label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.link {
+  cursor: pointer;
+  color: #60d9fb;
+}
+
+.start-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn.submit {
+  align-items: center;
+  border: none;
+  color: white;
+  background-color: #2f8da7;
+  font-weight: 600;
+  width: 120px;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background-color: #4f7883;
+}
+
+.register-request {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}

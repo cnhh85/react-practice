@@ -22,10 +22,6 @@ export default class Header extends React.Component {
     this.setState({ toggle: !this.state.toggle });
   };
 
-  onToggleChange = () => {
-    this.setState({ toggle: !this.state.toggle });
-  };
-
   render() {
     return (
       <div>
@@ -34,7 +30,7 @@ export default class Header extends React.Component {
             <HashLoader color="#61dafb" size="150px" />
           </div>
         ) : (
-          <div>
+          <div className="header">
             <div className="countdown">
               <div className="container">
                 <div className="title">
@@ -42,14 +38,12 @@ export default class Header extends React.Component {
                   <h3>The F-Code event on Sat, August 28, 2021</h3>
                 </div>
                 <Countdown />
-                <div className="btn" onClick={this.togglePop}>
-                  <button>Log in</button>
-                </div>
+                <button className="btn toggle-form" onClick={this.togglePop}>
+                  LOG IN
+                </button>
               </div>
             </div>
-            {this.state.toggle ? (
-              <Input onToggleChange={this.onToggleChange} />
-            ) : null}
+            {this.state.toggle ? <Input toggle={this.togglePop} /> : null}
           </div>
         )}
       </div>
